@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello Books!{% endblock %}
+
+{% block body %}
+    <h1>My Favourite Books</h1>
+    <ul>
+        {% for livre in livres %}
+            <li><h2>Titre : {{ livre.titre|capitalize }}</h2></li>
+            <li><h3>Description : {{ livre.description|capitalize }}</h3></li>
+            <li><h3>Note : {{ livre.note|capitalize }}</h3></li>
+        {% endfor %}
+    </ul>
+{% endblock %}
